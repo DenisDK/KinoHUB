@@ -8,7 +8,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 const DropdownMenu = () => {
   return (
     <div className="relative group ">
-      <div className="text-white duration-300 bg-[#3a3a3a] px-3 py-2 rounded-md group-hover:bg-[#575757] flex items-center gap-3">
+      <div className="text-[#505050] dark:text-white duration-300 dark:bg-[#3a3a3a] bg-[#c7c7c7] px-3 py-2 rounded-md group-hover:bg-[#b9b9b9] dark:group-hover:bg-[#575757] flex items-center gap-3">
         <Image
           src="/noavatar.png"
           alt="User logo"
@@ -23,12 +23,12 @@ const DropdownMenu = () => {
           <MdKeyboardArrowDown size={24} />
         </span>
       </div>
-      <div className="absolute hidden group-hover:block top-full right-0 bg-[#3a3a3a] border border-[#181818] rounded-md shadow-lg">
+      <div className="absolute hidden group-hover:block top-full right-0 bg-[#c7c7c7] dark:bg-[#3a3a3a] border border-[#a5a5a5] dark:border-[#181818] rounded-md shadow-lg">
         <ul className="w-[187px]">
           <li>
             <Link
               href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-white hover:bg-[#575757]"
+              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
               Профіль
             </Link>
@@ -36,7 +36,15 @@ const DropdownMenu = () => {
           <li>
             <Link
               href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-white hover:bg-[#575757]"
+              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
+            >
+              Кінотека
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
               Преміум
             </Link>
@@ -44,15 +52,16 @@ const DropdownMenu = () => {
           <li>
             <Link
               href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-white hover:bg-[#575757]"
+              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
               Налаштування
             </Link>
           </li>
+
           <li>
             <Link
               href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-white hover:bg-[#575757]"
+              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
               Вихід
             </Link>
