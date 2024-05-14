@@ -4,6 +4,7 @@ import React from "react";
 
 // Icons
 import { FiThumbsUp } from "react-icons/fi";
+
 const Card = ({ movie }) => {
   return (
     <div className="group cursor-pointer sm:hover:shadow-gray-00 dark:sm:hover:shadow-gray-600 sm:shadow-md rounded-2xl sm:m-2 transition-shadow duration-200">
