@@ -1,4 +1,5 @@
 import Results from "@/components/results/Results";
+import Search from "@/components/search/Search";
 
 export default async function Home({ searchParams }) {
   const res = await fetch(
@@ -15,6 +16,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <div className="text-center">
+      <Search />
       <Results movieData={movieData} />
     </div>
   );
