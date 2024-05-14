@@ -1,5 +1,21 @@
-import Image from "next/image";
+import Results from "@/components/results/Results";
 
-export default function Home() {
-  return <div className="text-center">Home</div>;
+export default async function Home({ searchParams }) {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.API_KEY}&language=uk-UK&page=1`
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = await res.json();
+
+  const movieData = data.results;
+
+  return (
+    <div className="text-center">
+      <Results movieData={movieData} />
+    </div>
+  );
 }

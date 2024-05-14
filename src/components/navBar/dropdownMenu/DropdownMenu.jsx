@@ -30,7 +30,7 @@ const DropdownMenu = () => {
               href="/"
               className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
-              Профіль
+              Lorem
             </Link>
           </li>
           <li>
@@ -38,23 +38,7 @@ const DropdownMenu = () => {
               href="/"
               className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
-              Кінотека
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
-            >
-              Преміум
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
-            >
-              Налаштування
+              Lorem
             </Link>
           </li>
 
@@ -63,7 +47,7 @@ const DropdownMenu = () => {
               href="/"
               className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
-              Вихід
+              Lorem
             </Link>
           </li>
         </ul>
