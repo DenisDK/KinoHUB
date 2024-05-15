@@ -16,7 +16,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <div className="text-center">
-      <Search />
+      {/* <Search /> */}
       <Results movieData={movieData} />
     </div>
   );
