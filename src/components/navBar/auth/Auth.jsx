@@ -22,7 +22,7 @@ const AuthComponent = () => {
     return unsubscribe;
   }, [auth]);
 
-  return <div>{user ? <DropdownMenu /> : <SignIn />}</div>;
+  return <div>{user ? <DropdownMenu user={user} /> : <SignIn />}</div>;
 };
 
 export default AuthComponent;

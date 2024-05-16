@@ -10,7 +10,6 @@ const loading = () => {
         alt="loading..."
         width={150}
         height={150}
-        property="false"
       />
     </div>
   );

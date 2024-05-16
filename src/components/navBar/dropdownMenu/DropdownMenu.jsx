@@ -7,26 +7,26 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { FaSignOutAlt } from "react-icons/fa";
 import { handleSignOut } from "@/lib/signOut";
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ user }) => {
   return (
     <div className="relative group ">
       <div className="text-[#505050] dark:text-white duration-300 dark:bg-[#3a3a3a] bg-[#c7c7c7] px-3 py-2 rounded-md group-hover:bg-[#b9b9b9] dark:group-hover:bg-[#575757] flex items-center gap-3">
         <Image
-          src="/noavatar.png"
+          src={user.photoURL ? user.photoURL : "/noavatar.png"}
           alt="User logo"
           // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={true} // {false} | {true}
-          width={30}
-          height={30}
+          width={35}
+          height={35}
           className="rounded-full"
         />
-        <span className="font-bold">User Name</span>
+        <span className="font-bold">{user.displayName}</span>
         <span className="bg-[#ff5200] rounded-md">
           <MdKeyboardArrowDown size={24} />
         </span>
       </div>
       <div className="absolute hidden group-hover:block top-full right-0 bg-[#c7c7c7] dark:bg-[#3a3a3a] border border-[#a5a5a5] dark:border-[#181818] rounded-md shadow-lg">
-        <ul className="w-[187px]">
+        <ul className="w-[189px]">
           <li>
             <Link
               href="/"

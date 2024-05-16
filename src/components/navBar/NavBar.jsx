@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import DropdownMenu from "./dropdownMenu/DropdownMenu";
 import ThemeSwitcher from "@/components/navBar/themeSwither/ThemeSwitcher";
 import AuthComponent from "./auth/Auth";
 
