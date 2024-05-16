@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import DropdownMenu from "./dropdownMenu/DropdownMenu";
 import ThemeSwitcher from "@/components/navBar/themeSwither/ThemeSwitcher";
+import AuthComponent from "./auth/Auth";
 
 // bg-[#242424]
 
@@ -26,7 +27,7 @@ const NavBar = () => {
         </Link>
         <div className="flex items-center gap-10">
           <ThemeSwitcher />
-          <DropdownMenu />
+          <AuthComponent />
         </div>
       </nav>
     </div>

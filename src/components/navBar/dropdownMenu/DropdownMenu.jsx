@@ -4,6 +4,8 @@ import React from "react";
 
 // Icons
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { FaSignOutAlt } from "react-icons/fa";
+import { handleSignOut } from "@/lib/signOut";
 
 const DropdownMenu = () => {
   return (
@@ -43,12 +45,13 @@ const DropdownMenu = () => {
           </li>
 
           <li>
-            <Link
-              href="/"
-              className="block px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
+            <span
+              onClick={handleSignOut}
+              className="flex items-center gap-2 px-4 py-2 rounded-md duration-300 text-[#505050] dark:text-white hover:bg-[#a0a0a0] dark:hover:bg-[#575757]"
             >
-              Lorem
-            </Link>
+              <FaSignOutAlt />
+              Вийти
+            </span>
           </li>
         </ul>
       </div>
