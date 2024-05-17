@@ -1,7 +1,7 @@
 import Results from "@/components/results/Results";
 import Search from "@/components/search/Search";
 
-export default async function Home({ searchParams }) {
+export default async function Home() {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.API_KEY}&language=uk-UK&page=1`
   );
