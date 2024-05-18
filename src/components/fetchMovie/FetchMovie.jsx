@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Results from "../results/Results";
+import Loading from "@/app/loading";
 
 const FetchMovie = () => {
   const [movieData, setMovieData] = useState([]);
@@ -17,16 +18,17 @@ const FetchMovie = () => {
         throw new Error("Failed to fetch data");
       }
       const data = await res.json();
-      setMovieData((prevData) => {
-        // Filter out duplicate movies by ID before adding new ones
-        const newMovies = data.results.filter(
-          (newMovie) => !prevData.some((movie) => movie.id === newMovie.id)
-        );
-        return [...prevData, ...newMovies];
-      });
+      setTimeout(() => {
+        setMovieData((prevData) => {
+          const newMovies = data.results.filter(
+            (newMovie) => !prevData.some((movie) => movie.id === newMovie.id)
+          );
+          return [...prevData, ...newMovies];
+        });
+        setLoading(false);
+      }, 500); // задержка в 500 миллисекунд
     } catch (error) {
       console.error(error);
-    } finally {
       setLoading(false);
     }
   };
@@ -39,7 +41,7 @@ const FetchMovie = () => {
     const handleScroll = () => {
       if (
         window.innerHeight + window.scrollY >=
-          document.body.offsetHeight - 500 &&
+          document.body.offsetHeight - 250 &&
         !loading
       ) {
         setPage((prevPage) => prevPage + 1);
@@ -52,7 +54,7 @@ const FetchMovie = () => {
   return (
     <div className="text-center">
       <Results movieData={movieData} />
-      {loading && <p>Loading...</p>}
+      {loading && <Loading />}
     </div>
   );
 };
