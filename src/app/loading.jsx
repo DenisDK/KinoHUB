@@ -10,6 +10,8 @@ const Loading = () => {
         alt="loading..."
         width={150}
         height={150}
+        style={{ width: "auto", height: "auto" }}
+        priority={true} // указываем приоритет загрузки
       />
     </div>
   );

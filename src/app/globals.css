@@ -26,6 +26,28 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Стили для полосы прокрутки */
+::-webkit-scrollbar {
+   width: 6px; /* Ширина полосы прокрутки */
+ }
+ 
+ /* Стили для трека прокрутки (области, по которой перемещается ползунок) */
+ ::-webkit-scrollbar-track {
+   /* background-color: transparent; Прозрачный цвет фона трека прокрутки */
+ }
+ 
+ /* Стили для ползунка прокрутки */
+ ::-webkit-scrollbar-thumb {
+   background-color: #3a3a3a; /* Цвет ползунка прокрутки */
+   border-radius: 3px; /* Скругление углов ползунка */
+ }
+ 
+ /* Опциональный стиль для ховера на ползунке прокрутки */
+ ::-webkit-scrollbar-thumb:hover {
+   background-color: #575757; /* Цвет ползунка при наведении */
+ }
+ 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

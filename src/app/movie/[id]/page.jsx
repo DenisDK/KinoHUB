@@ -7,16 +7,18 @@ import { FiThumbsUp } from "react-icons/fi";
 const MoviePage = async ({ params }) => {
   const movieId = params.id;
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=uk-UK`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=uk-UK`
   );
   const movie = await res.json();
   return (
     <div className="w-full">
       <div className="p-4 md:pt-8 flex flex-col lg:flex-row content-center max-w-screen-2xl mx-auto gap-4">
         <Image
-          src={`https://image.tmdb.org/t/p/original/${
-            movie.backdrop_path || movie.poster_path
-          }`}
+          src={
+            movie.poster_path
+              ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
+              : "/placeholder-image.jpg"
+          }
           width={600}
           height={300}
           className="rounded-lg md:w-full"

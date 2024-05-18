@@ -6,37 +6,23 @@ import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
 
 const Card = ({ movie }) => {
-  console.log(movie);
   return (
     <div className="group cursor-pointer sm:hover:shadow-gray-00 dark:sm:hover:shadow-gray-600 sm:shadow-md rounded-2xl sm:m-2 transition-shadow duration-200">
       <Link href={`/movie/${movie.id}`}>
         <div className="relative">
-          {/* <Image
-            // src={`https://image.tmdb.org/t/p/original/${
-            //   movie.backdrop_path || movie.poster_path
-            // }`}
-            src={
-              movie.poster_path
-                ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
-                : "/placeholder-image.jpg"
-            }
-            width={500}
-            height={300}
-            className="sm:rounded-t-lg rounded-2xl group-hover:opacity-75 transition-opacity duration-300"
-            alt="Movie poster"
-            title={`${movie.title || movie.name}\n${movie.overview}`}
-          /> */}
           <Image
             src={
               movie.poster_path
                 ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
                 : "/placeholder-image.jpg"
             }
-            width={500}
+            width={400}
             height={300}
-            className="sm:rounded-t-lg rounded-2xl group-hover:opacity-75 transition-opacity duration-300"
+            // className="sm:rounded-t-lg rounded-2xl group-hover:opacity-75 transition-opacity duration-300"
+            className="sm:rounded-t-lg rounded-2xl group-hover:opacity-75 transition-opacity duration-300 w-auto h-auto"
             alt="Movie poster"
             title={`${movie.title || movie.name}\n${movie.overview}`}
+            priority={true}
           />
 
           <div className="absolute bottom-0 left-0 right-0 bg-black rounded-b-2xl rounded-t-xl bg-opacity-50 text-white p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

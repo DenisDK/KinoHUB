@@ -94,6 +94,9 @@ const ProfilePage = () => {
         alt="User image"
         width={250}
         height={250}
+        //   style={{ width: "auto", height: "auto" }}
+        //   style={{ objectFit: "contain" }}
+        //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         priority={true}
       />
       <form className="" onSubmit={handleSubmit}>

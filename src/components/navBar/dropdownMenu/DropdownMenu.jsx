@@ -20,6 +20,8 @@ const DropdownMenu = ({ user }) => {
             width={35}
             height={35}
             className="rounded-full"
+            // style={{ width: "auto", height: "auto" }}
+            // style={{ objectFit: "contain" }}
           />
           <span className="font-bold">{user.displayName}</span>
           <span className="bg-[#ff5200] rounded-md">
@@ -28,7 +30,7 @@ const DropdownMenu = ({ user }) => {
         </Link>
       </div>
       <div className="z-10 absolute hidden group-hover:block top-full right-0 bg-[#c7c7c7] dark:bg-[#3a3a3a] border border-[#a5a5a5] dark:border-[#181818] rounded-md shadow-lg">
-        <ul className="w-[189px]">
+        <ul className="w-[187px]">
           <li>
             <Link
               href="/"
