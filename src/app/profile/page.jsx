@@ -67,6 +67,7 @@ const ProfilePage = () => {
         }
 
         alert("Дані користувача успішно оновлено!");
+        window.location.reload(); // Перезагрузка страницы после успешного обновления
       }
     } catch (error) {
       console.error(
