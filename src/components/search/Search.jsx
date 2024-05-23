@@ -17,7 +17,7 @@ const Search = () => {
   };
 
   return (
-    <div className="max-w-screen-md mx-auto mt-10">
+    <div className="max-w-screen-md mx-auto mt-10 p-4 rounded-3xl bg-[#F5F5F5] dark:bg-[#242424] shadow-lg shadow-gray-500">
       <form
         action=""
         className="flex items-center justify-between"
