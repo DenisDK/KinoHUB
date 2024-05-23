@@ -17,8 +17,9 @@ export default async function Home() {
 
   return (
     <div className="text-center">
-      {/* <Search /> */}
+      <Search />
       {/* <Results movieData={movieData} /> */}
+      
       <FetchMovie />
     </div>
   );

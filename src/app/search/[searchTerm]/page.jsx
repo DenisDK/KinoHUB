@@ -1,4 +1,5 @@
 import Results from "@/components/results/Results";
+import Search from "@/components/search/Search";
 import React from "react";
 
 const SearchPage = async ({ params }) => {
@@ -10,6 +11,7 @@ const SearchPage = async ({ params }) => {
   const movieData = data.results;
   return (
     <div>
+      <Search />
       {movieData &&
         movieData.length ===
         <h1 className="text-center pt-6">No results found</h1>}
