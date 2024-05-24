@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import Loading from "../loading";
+import Link from "next/link";
 
 const ProfilePage = () => {
   const auth = getAuth(app);
@@ -172,26 +173,31 @@ const ProfilePage = () => {
           {savedMovies.length > 0 ? (
             savedMovies.map((movie) => (
               <li key={movie.id} className={movieCardClass}>
-                <Image
-                  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-                  width={150}
-                  height={225}
-                  alt={movie.title}
-                  className={movieImageClass}
-                />
-                <h3 className={movieTitleClass}>{movie.title}</h3>
-                <p className={movieDateClass}>{movie.release_date}</p>
-                <button
-                  onClick={() => handleRemoveFromSavedMovies(movie.id)}
-                  className={removeButtonClass}
-                >
-                  Видалити
-                </button>
+                <Link href={`/movie/${movie.id}`}>
+                  <div className="flex flex-col items-center"> {/* Замість <a> використовуйте <div> */}
+                    <Image
+                      src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                      width={150}
+                      height={225}
+                      alt={movie.title}
+                      className={movieImageClass}
+                    />
+                    <h3 className={`${movieTitleClass} text-center`}>{movie.title}</h3>
+                    <p className={`${movieDateClass} text-center`}>{movie.release_date}</p>
+                    <button
+                      onClick={() => handleRemoveFromSavedMovies(movie.id)}
+                      className={removeButtonClass}
+                    >
+                      Видалити
+                    </button>
+                  </div>
+                </Link>
               </li>
             ))
           ) : (
             <p>Немає збережених фільмів.</p>
           )}
+
         </ul>
       </div>
     </div>

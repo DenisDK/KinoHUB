@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { FiThumbsUp } from "react-icons/fi";
 
 const MoviePage = async ({ params }) => {
   const [isAdded, setIsAdded] = useState(false);
@@ -75,7 +74,6 @@ const MoviePage = async ({ params }) => {
           <div className="flex items-center gap-3 text-lg">
             <span className="font-semibold">Рейтинг: </span>
             <span>{movie.vote_average}</span>
-            <FiThumbsUp className="text-yellow-500" />
           </div>
           {isAdded ? (
             <button
